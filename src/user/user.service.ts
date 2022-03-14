@@ -1,4 +1,4 @@
-import { HttpException, HttpStatus, Injectable, NotFoundException } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { User } from './user.entity';
@@ -8,12 +8,8 @@ export class UserService {
   constructor(@InjectRepository(User) private userRepo: Repository<User>) {}
 
   async create(email, password) {
-    try {
-      const user = this.userRepo.create({ email, password });
-      return this.userRepo.save(user);
-    } catch (error) {
-        return new HttpException(error, HttpStatus.INTERNAL_SERVER_ERROR);
-    }
+    const user = this.userRepo.create({ email, password });
+    return this.userRepo.save(user);
   }
 
   async findOne(id: string) {
