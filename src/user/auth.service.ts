@@ -7,7 +7,7 @@ const scrypt = promisify(_scrypt)
 
 @Injectable()
 export class AuthService {
-    constructor(
+constructor(
         private readonly userService: UserService
     ) {}
 

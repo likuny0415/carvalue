@@ -13,6 +13,9 @@ export class UserService {
   }
 
   async findOne(id: string) {
+    if (!id) {
+      return null
+    }
     return await this.userRepo.findOne(id);
   }
 
