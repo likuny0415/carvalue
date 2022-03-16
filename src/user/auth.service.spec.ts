@@ -6,9 +6,8 @@ import { User } from './user.entity';
 import { UserService } from './user.service';
 
 describe('AuthService', () => {
-
-let service: AuthService
-let fakeUserService: Partial<UserService>
+  let service: AuthService
+  let fakeUserService: Partial<UserService>
 
 beforeEach(async () => {
     const users: User[] = [];
