@@ -16,7 +16,7 @@
 Solution: VsCode auto auto generated import is **relative path** but it should be **absoulte path**
 
 
-##### Task2: Why interceptor is now work?
+##### Task2: Why interceptor is not work?
 Solution: Interceptor runns after Guard in nestjs. So, when we tried 
 to add properties to interceptors and pass into decorators, you
 need to put interceptor before the Guard. To deal with this problem,
