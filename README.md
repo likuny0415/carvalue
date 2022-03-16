@@ -1,6 +1,12 @@
 # Design
 
-### Features I achieved:
+### Features:
+1. Build authentication and authorization by using **Hash and Salt**, **cookie-session**.
+2. Enable admins check the report and decided whether to pass it.
+3. Tie different types of data together with **TypeORM** relationships
+4. Use Guards to prevent unauthorized users from gaining access to sensitive data
+
+### Important points:
 1. Build authentication and permissions systems from scratch
 2. Use Guards to prevent unauthorized users from gaining access to sensitive data
 3. Write **End-to-End** and **unit** tests to ensure my code is working
